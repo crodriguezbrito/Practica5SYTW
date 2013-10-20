@@ -1,4 +1,4 @@
-**Cuarta Práctica SYTW**
+**Practica 5 SYTW**
 ============================
 <center>
 ![](http://www.evilmilk.com/pictures/Rock_Paper_Scissors178.jpg)
