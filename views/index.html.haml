@@ -1,0 +1,36 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title RPS
+    %link{:href => "public/css/bootstrap.css", :rel => "stylesheet"}
+    %link{:href => "public/css/bootstrap-responsive.css", :rel => "stylesheet"}
+    %link{:href => "public/css/style.css", :rel => "stylesheet"}
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+      .container
+        %h2
+          - throws.map do |x|
+            %a{:href => "?choice=#{x}"} 
+              - if ("#{x}" == 'rock')               
+                %button.btn.btn-danger{type: "button"} Rock
+              - elsif ("#{x}" == 'paper')
+                %button.btn.btn-danger{type: "button"} Paper
+              - elsif ("#{x}" == 'scissors')
+                %button.btn.btn-danger{type: "button"} Scissors
+        %h1= inicio
+      .container
+        %center 
+          .row.span8
+            - if (anwser == 'Empate')
+              %h1 Jugadores Empatados
+            - elsif (anwser == 'Ganar')
+              %h1 Ganaste; #{player_throw} vence a #{computer_throw}.
+            - elsif (anwser == 'Perder')
+              %h1 Ouch Perdiste; #{computer_throw} vence a #{player_throw}.
+      .container        
+        %a{:href => '/'} 
+          %button.btn.btn-success{type: "button"} Volver a Empezar 
+    %script{:src => "/js/bootstrap.js"}
+   
