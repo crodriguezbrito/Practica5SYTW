@@ -8,15 +8,10 @@ describe Rsack::Server do
   end
 
   context '/' do
-    it "should return a 200 code" do
-      response = server.get('/')
-      response.status.should == 200
-    end
-    
-	it "Debería mostrar RPS" do
-		response = server.get('/')
-		response.header == ' '
-	end
+		it "should return a 200 code" do
+			response = server.get('/')
+			response.status.should == 200
+		end
   end
   
   context "/?choice='rock'" do
@@ -25,6 +20,23 @@ describe Rsack::Server do
 				response = server.get("/?choice='rock'")
 				response.status.should == 200
 		end
+		it "pierde piedra" do
+			computer_throw = 'paper'
+			response = server.get("/?choice='rock'")
+			response.body.include?("perder")
+		end
+		it "gana piedra" do
+			computer_throw = 'sccisors'
+			response = server.get("/?choice='rock'")
+			response.body.include?("ganar")
+		end 
+		it "empatar" do
+			computer_throw = 'rock'
+			response = server.get("/?choice='rock'")
+			response.body.include?("empatar")
+		end
+			
+		
 	end
 	
 	context "/?choice='paper'" do
@@ -32,6 +44,22 @@ describe Rsack::Server do
 		it "Debería devolver el código 200" do
 				response = server.get("/?choice='paper'")
 				response.status.should == 200
+		end
+		
+		it "pierde papel" do
+			computer_throw = 'scissors'
+			response = server.get("/?choice='paper'")
+			response.body.include?("perder")
+		end
+		it "gana piedra" do
+			computer_throw = 'rock'
+			response = server.get("/?choice='paper'")
+			response.body.include?("ganar")
+		end 
+		it "empatar" do
+			computer_throw = 'paper'
+			response = server.get("/?choice='paper'")
+			response.body.include?("empatar")
 		end
 	end
   
@@ -41,5 +69,7 @@ describe Rsack::Server do
 				response = server.get("/?choice='scissors'")
 				response.status.should == 200
 		end
+		
+	
 	end
 end
