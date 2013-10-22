@@ -12,5 +12,10 @@ describe Rsack::Server do
       response = server.get('/')
       response.status.should == 200
     end
+    
+	it "Debería mostrar RPS" do
+		response = server.get('/')
+		response.header == ' '
+	end
   end
 end
