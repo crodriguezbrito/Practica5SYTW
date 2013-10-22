@@ -70,6 +70,21 @@ describe Rsack::Server do
 				response.status.should == 200
 		end
 		
+		it "pierde tijeras" do
+			computer_throw = 'rock'
+			response = server.get("/?choice='scissors'")
+			response.body.include?("perder")
+		end
+		it "gana piedra" do
+			computer_throw = 'paper'
+			response = server.get("/?choice='scissors'")
+			response.body.include?("ganar")
+		end 
+		it "empatar" do
+			computer_throw = 'scissors'
+			response = server.get("/?choice='scissors'")
+			response.body.include?("empatar")
+		end
 	
 	end
 end
