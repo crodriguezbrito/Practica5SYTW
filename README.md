@@ -14,7 +14,7 @@ Añadir pruebas Template Haml a Rock, Paper, Scissors
 ## Ejecucion práctica
 Para ejecutar la práctica podemos hacer `rake` o bien vamos a la carpeta /app y ejecutamos`ruby rps.rb`
 ## Ejecucion de los test 
-Para ejecutar los test hacemos `rake test`
+Para ejecutar los test hacemos `rake test` o `rake spec`
 3. Vista 
 ---------
 acceder a la dirección [http://localhost:9292](http://localhost:9292) desde cualquier navegador

@@ -22,13 +22,17 @@
         %h1= inicio
       .container
         %center 
+        
           .row.span8
             - if (anwser == 'Empate')
               %h1 Jugadores Empatados
+              %img{:src => 'http://pad3.whstatic.com/images/thumb/e/ed/42597-3-bullet-5.jpg/550px-42597-3-bullet-5.jpg', :alt => 'TIE'}
             - elsif (anwser == 'Ganar')
               %h1 Ganaste; #{player_throw} vence a #{computer_throw}.
+              %img{:src => 'http://revistabarcelona.com.ar/wp-content/uploads/2012/12/vi%C3%B1eta-pulgar-hacia-arriba.jpg', :alt => 'WIN'}
             - elsif (anwser == 'Perder')
               %h1 Ouch Perdiste; #{computer_throw} vence a #{player_throw}.
+              %img{:src => 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT0zDnaeNgge33_RDPTEzNePEGsxYGXTY3ALZt4arM9b-WYuYlh', :alt => 'LOSE'}
       .container        
         %a{:href => '/'} 
           %button.btn.btn-success{type: "button"} Volver a Empezar 
