@@ -27,7 +27,7 @@ class AppTest < Test::Unit::TestCase
 		get "/public/css/style.css"
 		assert last_response.ok?
 	end
- 
+     
 	 def test_body_rock
         get "/"
         assert last_response.body.include?("Rock")
@@ -40,6 +40,5 @@ class AppTest < Test::Unit::TestCase
         get "/"
         assert last_response.body.include?("Scissors")
     end
-	
  
 end

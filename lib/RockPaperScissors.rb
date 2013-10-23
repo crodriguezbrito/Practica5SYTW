@@ -13,7 +13,8 @@ module RockPaperScissors
 			@defeat = {'rock' => 'scissors', 'paper' => 'rock', 'scissors' => 'paper'}
 			@throws = @defeat.keys
 		end
-
+		
+		
 		def call env
 			req = Rack::Request.new(env)
 			req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
