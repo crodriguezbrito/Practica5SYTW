@@ -29,12 +29,24 @@
               %img{:src => 'http://pad3.whstatic.com/images/thumb/e/ed/42597-3-bullet-5.jpg/550px-42597-3-bullet-5.jpg', :alt => 'TIE'}
             - elsif (anwser == 'Ganar')
               %h1 Ganaste; #{player_throw} vence a #{computer_throw}.
-              %img{:src => 'http://revistabarcelona.com.ar/wp-content/uploads/2012/12/vi%C3%B1eta-pulgar-hacia-arriba.jpg', :alt => 'WIN'}
+              %img{:src => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdNEnRciWkn3mNMZ1faZV7pBt_eMymPbdXBOh7_vYiZ44QaVP2yw', :alt => 'WIN'}
             - elsif (anwser == 'Perder')
               %h1 Ouch Perdiste; #{computer_throw} vence a #{player_throw}.
               %img{:src => 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT0zDnaeNgge33_RDPTEzNePEGsxYGXTY3ALZt4arM9b-WYuYlh', :alt => 'LOSE'}
       .container        
         %a{:href => '/'} 
-          %button.btn.btn-success{type: "button"} Volver a Empezar 
+          %button.btn.btn-success{type: "button"} Volver a Empezar
+      %center
+        %form.form-inline
+          %label
+            %h5 Partidas 
+            %input.input-small{name: "Part", type: "text", value: "#{play}"}
+            %h5 Ganadas 
+            %input.input-small{name: "Gana", type: "text", value: "#{win}"}
+            %h5 Perdidas 
+            %input.input-small{name: "Perd", type: "text", value: "#{lost}"}
+            %h5 Empatadas 
+            %input.input-small{name: "Empa", type: "text", value: "#{tie}"}
+          
     %script{:src => "/js/bootstrap.js"}
    
