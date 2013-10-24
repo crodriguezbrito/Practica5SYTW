@@ -36,17 +36,24 @@
       .container        
         %a{:href => '/'} 
           %button.btn.btn-success{type: "button"} Volver a Empezar
-      %center
-        %form.form-inline
-          %label
-            %h5 Partidas 
-            %input.input-small{name: "Part", type: "text", value: "#{play}"}
-            %h5 Ganadas 
-            %input.input-small{name: "Gana", type: "text", value: "#{win}"}
-            %h5 Perdidas 
-            %input.input-small{name: "Perd", type: "text", value: "#{lost}"}
-            %h5 Empatadas 
-            %input.input-small{name: "Empa", type: "text", value: "#{tie}"}
+      .row.span12
+        %center
+          %form.form-inline
+            %label
+              %h5 Partidas 
+              %input.input-small{name: "Part", type: "text", value: "#{play}"}
+              %br
+            %label
+              %h5 Ganadas 
+              %input.input-small{name: "Gana", type: "text", value: "#{win}"}
+              %br
+            %label
+              %h5 Perdidas 
+              %input.input-small{name: "Perd", type: "text", value: "#{lost}"}
+              %br
+            %label  
+              %h5 Empatadas 
+              %input.input-small{name: "Empa", type: "text", value: "#{tie}"}
           
     %script{:src => "/js/bootstrap.js"}
    
