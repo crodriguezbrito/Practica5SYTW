@@ -6,11 +6,15 @@ class AppTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
   
-  def app
-   Rack::Builder.new do
-	run RockPaperScissors::RPS.new        
-   end
-  end
+  #def app
+   #Rack::Builder.new do
+	#run RockPaperScissors::RPS.new        
+   #end
+  #end
+	def app
+       Rack::Session::Cookie.new(RockPaperScissors::RPS.new,
+              :secret => 'cookie')
+    end
   
 	def test_index
 		get "/"
