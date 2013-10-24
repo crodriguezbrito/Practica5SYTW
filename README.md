@@ -17,7 +17,7 @@ Para ejecutar la práctica podemos hacer `rake` o bien vamos a la carpeta /app y
 Para ejecutar los test hacemos `rake test` o `rake spec`
 3. Vista 
 ---------
-acceder a la dirección [http://localhost:9292](http://localhost:9292) desde cualquier navegador
+acceder a la dirección [http://localhost:8080](http://localhost:8080) desde cualquier navegador
 
 
 
