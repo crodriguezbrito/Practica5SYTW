@@ -18,7 +18,7 @@ Para ejecutar los test hacemos `rake test` o `rake spec`
 3. Vista 
 ---------
 acceder a la dirección [http://localhost:8080](http://localhost:8080) desde cualquier navegador 
-**Ejecutarla desde navegación privada
+**Ejecutarla desde navegación privada**
 
 
 
